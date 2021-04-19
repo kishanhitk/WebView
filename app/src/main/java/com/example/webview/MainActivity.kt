@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
         val myWebView = WebView(this@MainActivity)
         setContentView(myWebView)
         myWebView.webViewClient = object : WebViewClient() {
-            override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
-                view?.loadUrl("https://www.kishans.in")
+            override fun shouldOverrideUrlLoading(view: WebView?, url: String): Boolean {
+                view?.loadUrl(url)
                 return false
             }
         }
